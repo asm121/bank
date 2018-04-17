@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Secret Bank</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+
+        }
+
+        html {
+            background-color: #34495e;
+        }
+
+        .container {
+            background-color: #ecf0f1;
+            width: 70%;
+            margin: 0 auto;
+            height: 50%;
+            display: flex;
+            top: 5%;
+            left: 15%;
+            position: absolute;
+        }
+
+        .header {
+            cursor: default;
+            width: 100%;
+            background-color: #1abc9c;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+            text-align: center;
+            padding-top: 20px;
+            box-sizing: border-box;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #16a085;
+        }
+
+        .total {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: #ecf0f1;
+            width: 115px;
+            margin: 0 auto;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .icon_nav {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            color: #ecf0f1;
+            font-size: 20px;
+            width: 100%;
+            padding: 0 20px 20px 20px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #16a085;
+        }
+
+        .icon_nav i {
+            cursor: pointer;
+            display: block;
+            padding: 10px;
+
+            border-radius: 50%;
+        }
+
+        .icon_nav i:hover {
+            background-color: #16a085;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-weight: normal;
+            color: #ecf0f1;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list {
+            width: 100%;
+            list-style-type: none;
+            font-family: 'Roboto', sans-serif;
+            color: #2c3e50;
+        }
+
+        .list li {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px 5px 10px;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+
+        .list li i {
+            margin-right: 5px;
+            opacity: 0.25;
+        }
+
+        .amount {
+            font-weight: 300;
+        }
+
+
+
+
+        .pos {
+            color: #27ae60;
+        }
+        .pos:before {
+            content: '+$';
+        }
+
+        .neg {
+            color: #c0392b;
+        }
+        .neg:before {
+            content:'-$';
+        }
+
+        .info {
+            list-style-type: none;
+            font-size: 12px;
+            background-color: #bdc3c7;
+            padding: 0;
+            width: 100%;
+            overflow: auto;
+            box-sizing: border-box;
+            height: 0;
+        }
+
+        .info ul li {
+            background-color: #bdc3c7;
+            width: 100%;
+            height: 100px;
+            border-top: 1px solid #7f8c8d;
+            margin-top: -72px;
+        }
+
+        .info li h3 {
+            font-weight: normal;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: -5px;
+        }
+
+        form{
+            margin-top: 20px;
+            margin-right:5px;
+            margin-left:5px;
+
+        }
+        #FORM {
+
+            padding-top: 15px;
+        }
+
+
+        #cc_d8a4ad3036_Go{
+            margin-top: 10px;
+        }
+
+        /*START LOGIN FORM --------------------------------------------------------------------------- */
+
+
+        .wrap{
+            padding:120px 0;
+            font-size:62px;
+            color:#34495e;
+            width:400px;
+
+            margin:0 auto;
+            text-align:center;
+        }
+
+        input{
+
+            font-weight:300;
+            border:0;
+            border-bottom:1px solid #34495e;
+            width:80%;
+            height:36px;
+            font-size:26px;
+        }
+
+        input:focus{
+            outline:none;
+            box-shadow:none;
+            background:#ffeae2;
+        }
+
+        button{
+            border:0;
+            background:transparent;
+            padding:5px;
+            margin-top:10px;
+
+            outline:0;
+            left: 81.5%;
+            position: absolute;
+        }
+        .buttonafter:after{
+            content:'';
+
+
+            top:8px;
+            left:100%; /*should be set to 100% */
+            width:0;
+            height:0;
+            border-color: transparent transparent transparent #14a03d; /*border color should be same as div div background color*/
+            border-style: solid;
+            border-width: 5px;
+
+        }
+
+
+        .login{
+            background:#34495e;
+            color:#fff;
+            float:right;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <ul class="icon_nav">
+            <h1 style="font-size: 34px">TopSecretBank.com</h1>
+
+
+
+            <li><i class="fa fa-arrow-left"></i></li>
+            <li><i class="fa fa-bars"></i></li>
+
+        </ul>
+
+        <h1>"Your Privacy Is Our</h1>
+        <h1>Top Priority"</h1>
+
+        <form id="login" action="take2.html" method="post">
+            <input type='text' id='username' placeholder='Username'>
+            <input type='password' id='password' placeholder='Password'>
+
+        </form>
+        <button class='login' type="submit" onclick="form.submit()">LOG IN</button>
+        <!--
+    <span class="total pos">1,000,000</span>
+
+    <div id="FORM">
+
+    <div>
+        <div>
+            <form id="login" action="take2.html" method="post">
+
+                <div>
+                    <input type="text" value="" placeholder="Username" name="cc-fields[first_name][value]" class="t  required" id="Username">
+                    <input type="hidden" name="cc-fields[first_name][req]" value="1">
+                </div><div><input type="hidden" value="" placeholder="Password" name="cc-fields[email_address][value]" class="t  required" id="password">
+                    <input type="hidden" name="cc-fields[email_address][req]" value="1">
+
+
+                        <input type="submit" value="Log In" class="b button" id="cc_d8a4ad3036_Go" name="constant-contact-signup-submit">
+
+
+                </div>
+
+               <!--
+                <div>
+                    <input type="hidden" id="cc_redirect_url" name="cc_redirect_url" value="">
+                    <input type="hidden" id="cc_referral_url" name="cc_referral_url" value="%2F">
+                    <input type="hidden" name="cc_referral_post_id" value="2">
+                    <input type="hidden" name="uniqueformid" value="d8a4ad3036">
+                    <input type="hidden" name="ccformid" value="1">
+                </div>
+
+
+            </form>
+        </div></div></section>
+    </div>
+-->
+
+    </div>
+
+</div>
+<div class="content">
+
+</div>
+</div>
+
+</body>
+</html>
