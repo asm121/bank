@@ -20,7 +20,8 @@
             background-color: #ecf0f1;
             width: 350px;
             margin: 0 auto;
-            display: block;
+            height: 100%;
+            display: flex;
         }
 
         .header {
@@ -153,9 +154,83 @@
             margin-bottom: -5px;
         }
 
+        form{
+            margin-top: 20px;
+            margin-right:5px;
+            margin-left:5px;
 
+        }
+        #FORM {
+
+            padding-top: 15px;
+        }
+
+
+        #cc_d8a4ad3036_Go{
+            margin-top: 10px;
+        }
+
+        /*START LOGIN FORM --------------------------------------------------------------------------- */
+
+
+        .wrap{
+            padding:120px 0;
+            font-size:62px;
+            color:#34495e;
+            width:400px;
+
+            margin:0 auto;
+            text-align:center;
+        }
+
+        input{
+
+            font-weight:300;
+            border:0;
+            border-bottom:1px solid #34495e;
+            width:100%;
+            height:36px;
+            font-size:26px;
+        }
+
+        input:focus{
+            outline:none;
+            box-shadow:none;
+            background:#ffeae2;
+        }
+
+        button{
+            border:0;
+            background:transparent;
+            padding:5px;
+            margin-top:10px;
+
+            outline:0;
+        }
+        .buttonafter:after{
+            content:'';
+
+
+            top:8px;
+            left:100%; /*should be set to 100% */
+            width:0;
+            height:0;
+            border-color: transparent transparent transparent #14a03d; /*border color should be same as div div background color*/
+            border-style: solid;
+            border-width: 5px;
+
+        }
+
+
+        .login{
+            background:#34495e;
+            color:#fff;
+            float:right;
+        }
     </style>
-    <script></script>
+    <script>
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -170,88 +245,55 @@
 
         </ul>
 
-        <h1>Checking</h1>
+        <h1>"Your Privacy Is Our</h1>
+        <h1>Top Priority"</h1>
+
+        <form id="login" action="take2.html" method="post">
+            <input type='text' id='username' placeholder='Username'>
+            <input type='password' id='password' placeholder='Password'>
+         <button class='login' type="submit">LOG IN</button>
+        </form>
+            <!--
         <span class="total pos">1,000,000</span>
+
+        <div id="FORM">
+
+        <div>
+            <div>
+                <form id="login" action="take2.html" method="post">
+
+                    <div>
+                        <input type="text" value="" placeholder="Username" name="cc-fields[first_name][value]" class="t  required" id="Username">
+                        <input type="hidden" name="cc-fields[first_name][req]" value="1">
+                    </div><div><input type="hidden" value="" placeholder="Password" name="cc-fields[email_address][value]" class="t  required" id="password">
+                        <input type="hidden" name="cc-fields[email_address][req]" value="1">
+
+
+                            <input type="submit" value="Log In" class="b button" id="cc_d8a4ad3036_Go" name="constant-contact-signup-submit">
+
+
+                    </div>
+
+                   <!--
+                    <div>
+                        <input type="hidden" id="cc_redirect_url" name="cc_redirect_url" value="">
+                        <input type="hidden" id="cc_referral_url" name="cc_referral_url" value="%2F">
+                        <input type="hidden" name="cc_referral_post_id" value="2">
+                        <input type="hidden" name="uniqueformid" value="d8a4ad3036">
+                        <input type="hidden" name="ccformid" value="1">
+                    </div>
+
+
+                </form>
+            </div></div></section>
+        </div>
+-->
+
+    </div>
+
     </div>
     <div class="content">
-        <ul class="list">
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/15/15</span><span class="amount pos">150.00</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/04/15</span><span class="amount neg">13.99</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">45.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">35.12</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">1.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">145.50</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
-            <li><span class="date"><i class="fa fa-arrow-circle-o-right"></i>06/01/15</span><span class="amount neg">445.10</span></li>
-            <ul class="info">
-                <li><h3>Description</h3></li>
-                <li>Transfer from account: XXXXXXXX1234</li>
-            </ul>
 
-        </ul>
     </div>
 </div>
 
