@@ -18,9 +18,14 @@
 
         .container {
             background-color: #ecf0f1;
-            width: 350px;
+            width: 33%;
             margin: 0 auto;
-            display: block;
+            height: 90%;
+            display: flex;
+            position: absolute;
+            top: 5%;
+            left: 33%
+
         }
 
         .header {
@@ -153,6 +158,12 @@
             margin-bottom: -5px;
         }
 
+        form{
+            margin-top: 20px;
+            margin-right:5px;
+            margin-left:5px;
+
+        }
         #FORM {
 
             padding-top: 15px;
@@ -162,14 +173,170 @@
         #cc_d8a4ad3036_Go{
             margin-top: 10px;
         }
+
+        /*START LOGIN FORM --------------------------------------------------------------------------- */
+
+
+        .wrap{
+            padding:120px 0;
+            font-size:62px;
+            color:#34495e;
+            width:400px;
+
+            margin:0 auto;
+            text-align:center;
+        }
+
+        input{
+
+            font-weight:300;
+            border:0;
+            border-bottom:1px solid #34495e;
+            width:100%;
+            height:36px;
+            font-size:26px;
+        }
+
+        input:focus{
+            outline:none;
+            box-shadow:none;
+            background:#ffeae2;
+        }
+
+        button{
+            border:0;
+            background:transparent;
+            padding:5px;
+            margin-top:10px;
+
+            outline:0;
+        }
+        .buttonafter:after{
+            content:'';
+
+
+            top:8px;
+            left:100%; /*should be set to 100% */
+            width:0;
+            height:0;
+            border-color: transparent transparent transparent #14a03d; /*border color should be same as div div background color*/
+            border-style: solid;
+            border-width: 5px;
+
+        }
+
+
+        .login{
+            background:#34495e;
+            color:#fff;
+            float:right;
+        }
+
+        /*LOCk ------------------------------------------- */
+
+
+            @keyframes raise-in {
+                from {
+                    transform: translateY(-20%);
+                }
+                to {
+                    transform: translateY(0%);
+                }
+            }
+            @keyframes raise {
+                0% {
+                    transform: translateY(0%);
+                }
+                100% {
+                    transform: translateY(-20%);
+                }
+            }
+            @keyframes sink-in {
+                0% {
+                    transform: translateY(10%);
+                }
+                100% {
+                    transform: translateY(0%);
+                }
+            }
+            @keyframes sink {
+                0% {
+                    transform: translateY(0%);
+                }
+                100% {
+                    transform: translateY(10%);
+                }
+            }
+            @keyframes rotate-in {
+                0% {
+                    transform: rotate(90deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(90deg);
+                }
+            }
+        #lock {
+
+
+            height: auto;
+
+            width: 15%;
+            height: auto;
+            position: absolute;
+            left: 43%;
+            top: 40%;
+            margin-top: 100px;
+        }
+        #lock:hover .layer_1 {
+            animation: raise 0.6s ease;
+            animation-fill-mode: forwards;
+        }
+        #lock:hover .layer_3 {
+            animation: sink 0.6s ease;
+            animation-fill-mode: forwards;
+        }
+        #lock:hover .layer_2 {
+            animation: rotate 0.6s ease;
+            transform-origin: 140px 230px;
+            animation-fill-mode: forwards;
+        }
+
+        .layer_1 {
+            animation: raise-in 1s ease;
+            animation-fill-mode: forwards;
+        }
+
+        .layer_3 {
+            animation: sink-in 1s ease;
+            animation-fill-mode: forwards;
+        }
+
+        .layer_2 {
+            animation: rotate-in 1s ease;
+            transform-origin: 140px 230px;
+            animation-fill-mode: forwards;
+        }
+
     </style>
-    <script></script>
+    <script>
+        if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+            if (document.cookie.indexOf("iphone_redirect=false") == -1) window.location = "mobile.html";
+        }
+    </script>
 </head>
 <body>
 <div class="container">
     <div class="header">
         <ul class="icon_nav">
-            <h1 style="font-size: 34px">TopSecretBank.com</h1>
+            <h1 style="font-size: 43px">TopSecretBank.com</h1>
 
 
 
@@ -180,32 +347,34 @@
 
         <h1>"Your Privacy Is Our</h1>
         <h1>Top Priority"</h1>
-<!--
+
+        <form id="login" action="take2.html" method="post">
+            <input type='text' id='username' placeholder='Username'>
+            <input type='password' id='password' placeholder='Password'>
+         <button class='login' type="submit">LOG IN</button>
+        </form>
+            <!--
         <span class="total pos">1,000,000</span>
--->
+
         <div id="FORM">
 
-        <div class="widget-area footer-widgets-3 footer-widget-area"><section id="ctct_form_designer_widget-3" class="widget constant-contact-form"><div class="widget-wrap"><h4 class="widget-title widgettitle"></h4>
-            <div class="kws_form gform_wrapper" id="cc_form_1">
-                <form id="constant-contact-signup-1" action="take2.html" method="post">
+        <div>
+            <div>
+                <form id="login" action="take2.html" method="post">
 
-                    <div class="kws_input_fields gform_fields"><div class="cc_first_name kws_input_container gfield" ><input type="text" value="" placeholder="Username" name="cc-fields[first_name][value]" class="t  required" id="Username">
-
+                    <div>
+                        <input type="text" value="" placeholder="Username" name="cc-fields[first_name][value]" class="t  required" id="Username">
                         <input type="hidden" name="cc-fields[first_name][req]" value="1">
-                    </div><div class="cc_email_address kws_input_container gfield"><input type="text" value="" placeholder="Password" name="cc-fields[email_address][value]" class="t  required" id="password">
-
+                    </div><div><input type="hidden" value="" placeholder="Password" name="cc-fields[email_address][value]" class="t  required" id="password">
                         <input type="hidden" name="cc-fields[email_address][req]" value="1">
-                    </div><div class="cc_Go kws_input_container gfield">
-                        <label for="cc_d8a4ad3036_Go" class="">
 
-                            <input type="submit" value="Log Into TopSecretBank.com" class="b button" id="cc_d8a4ad3036_Go" name="constant-contact-signup-submit">
-                            <div class="kws_clear"></div>
-                        </label>
-                    </div><div class="cc_newsletter input-text-wrap cc-input-type-hidden">
+
+                            <input type="submit" value="Log In" class="b button" id="cc_d8a4ad3036_Go" name="constant-contact-signup-submit">
+
 
                     </div>
-                        <input type="submit" style="position:absolute; width:0;height:0;left:-9999px; border-radius: 50%;" name="constant-contact-signup-submit">
-                    </div>
+
+                   <!--
                     <div>
                         <input type="hidden" id="cc_redirect_url" name="cc_redirect_url" value="">
                         <input type="hidden" id="cc_referral_url" name="cc_referral_url" value="%2F">
@@ -213,11 +382,12 @@
                         <input type="hidden" name="uniqueformid" value="d8a4ad3036">
                         <input type="hidden" name="ccformid" value="1">
                     </div>
-                    <div class="kws_clear"></div>
-                    <!-- Form Generated by the Constant Contact API WordPress Plugin by Katz Web Services, Inc. -->
+
+
                 </form>
             </div></div></section>
         </div>
+-->
 
     </div>
 
@@ -225,6 +395,25 @@
     <div class="content">
 
     </div>
+</div>
+<div id="lock">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 290.2 351.4" enable-background="new 0 0 290.2 351.4" xml:space="preserve">
+<g class="layer_1">
+	<path fill="#808285" d="M226.9,132c-0.1-44.7-36.4-81-81.1-81c-44.7,0-80.9,36.1-81.1,80.7h0v20.6h28.1v-20.1c0-29.3,23.7-53,53-53
+		c29.3,0,53,23.7,53,53v79.3h28.1L226.9,132L226.9,132z"/>
+	<path fill="none" d="M145.8,50.5c-29.3,0-53,23.7-53,53h106C198.8,74.2,175.1,50.5,145.8,50.5z"/>
+</g>
+<g class="layer_3">
+	<g>
+		<path fill="#FBB040" d="M231.9,299.7H58.7c-9.4,0-17-7.6-17-17V147.5h207.2v135.2C248.9,292.1,241.3,299.7,231.9,299.7z"/>
+		<path fill="#F7941E" d="M248.4,282.7V147.5H145.3v152.2h86.1C240.8,299.7,248.4,292.1,248.4,282.7z"/>
+	</g>
+</g>
+<g class="layer_2">
+	<rect x="122.2" y="215.8" fill="#414042" width="46.2" height="16.2"/>
+</g>
+</svg>
 </div>
 
 </body>
